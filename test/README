@@ -1,0 +1,84 @@
+# Edge AI Based Smart EV Charging Station Optimizer
+
+An IoT-enabled smart EV charging station prototype using ESP32, Edge AI,
+MQTT, and ThingsBoard for real-time monitoring and intelligent charging control.
+
+## Project Overview
+
+This project simulates a smart EV charging bay that can monitor electrical
+parameters, detect charging conditions, make local charging decisions, and
+send telemetry to a cloud dashboard.
+
+The ESP32 performs edge-side decision making and communicates with ThingsBoard
+using MQTT.
+
+## Key Features
+
+- Real-time voltage monitoring
+- Real-time current monitoring
+- Power calculation
+- Energy consumption tracking
+- Temperature monitoring using DHT22
+- EV plug-in / plug-out detection
+- Automatic charging control
+- Overcurrent protection
+- Charging throttling
+- AI-based EV arrival probability prediction
+- AI-based charging duration prediction
+- MQTT telemetry
+- ThingsBoard dashboard
+- Remote relay control using RPC
+- Manual charging override
+- Real-time alerts and status monitoring
+
+## Hardware
+
+- ESP32 DevKit
+- 2 × Potentiometers for simulated voltage/current inputs
+- DHT22 temperature sensor
+- Push buttons for EV plug-in and plug-out simulation
+- Relay output
+- Red, yellow and green LEDs
+- Resistors
+
+The hardware is simulated using Wokwi.
+
+## Software & Technologies
+
+- C++
+- Arduino Framework
+- ESP32
+- PlatformIO
+- Wokwi
+- MQTT
+- ThingsBoard
+- Edge AI
+- ArduinoJson
+- DHT22
+
+## System Architecture
+
+```text
+Sensors / User Inputs
+        |
+        v
+      ESP32
+        |
+        +--> Sensor Processing
+        |
+        +--> Edge AI Prediction
+        |
+        +--> Charging Optimization
+        |
+        +--> Relay / LED Control
+        |
+        v
+       MQTT
+        |
+        v
+   ThingsBoard Cloud
+        |
+        +--> Real-time Dashboard
+        +--> Telemetry
+        +--> Alerts
+        +--> RPC Control
